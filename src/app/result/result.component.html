@@ -1,1 +1,25 @@
-<p>result works!</p>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<div class="container bootstrap snippets bootdey">
+    <hr>
+    <div class="row" *ngIf="quizResult.length>0; else otherDiv">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="well search-result" >
+                <div class="row">
+                    <a href="#">
+                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+                            <img class="img-responsive" src="https://www.bootdey.com/image/400x200/7B68EE/000000" width="200px" alt="">
+                        </div>
+                        <div class="col-xs-6 col-sm-9 col-md-9 col-lg-10 title">
+                            <h3>Result name one</h3>
+                            <p>Ut quis libero id orci semper porta ac vel ante. In nec laoreet sapien. Nunc hendrerit ligula at massa sodales, ullamcorper rutrum orci semper.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+      <ng-template #otherDiv>
+        No Result Found
+      </ng-template>
+</div>

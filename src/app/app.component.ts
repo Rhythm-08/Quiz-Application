@@ -28,8 +28,12 @@ clickQuestion(){
   this.isQuestionActive = true;
   this.isQuizActive = false;
   this.isResultActive = false;
-
-
+  }
+  
+  clickedNavbar(){
+    this.isQuizActive = true;
+    this.isQuestionActive=false;
+    this.isResultActive = false;
   }
 
 }

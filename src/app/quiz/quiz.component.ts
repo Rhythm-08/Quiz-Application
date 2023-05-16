@@ -25,7 +25,7 @@ export class QuizComponent implements OnInit{
     })
   }
   getValue(event:any){
-    console.log(event)
+    // console.log(event)
     // this.submitted=event;
 
   }
@@ -47,7 +47,7 @@ solutionArray:any[]=[];
       if(element==array[index]){
         count++;
       }});
-      console.log(count)
+      // console.log(count)
       this.quizService.putResults(count);
 this.router.navigate(['/result'])
 }

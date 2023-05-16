@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { QuizService } from '../quiz.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-question',
@@ -8,24 +9,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent implements OnInit{
-  questionArray:any[]=[]
-  questionForm!: FormGroup;
-constructor(private QuizService:QuizService,private formBuilder:FormBuilder){}
-ngOnInit(): void {
-  this.questionArray=this.QuizService.quizList;
-  this.questionForm = this.formBuilder.group({
-    question: ['', Validators.required],
-    option1: ['', Validators.required],
-    option2: ['', Validators.required],
-    option3: ['', Validators.required],
-    option4: ['', Validators.required]
-  });
-}
-submitForm(){
-  if (this.questionForm.valid) {
-    // Handle form submission
-    console.log(this.questionForm.value);
-  }
-}
+  @Output() messageEvent = new EventEmitter<boolean>();
+
+ ngOnInit(){
+  this.messageEvent.emit(true)
+ }
+
 
 }

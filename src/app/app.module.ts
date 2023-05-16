@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestionComponent } from './question/question.component';
 import { ResultComponent } from './result/result.component';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +17,7 @@ import { ResultComponent } from './result/result.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SweetAlert2Module,
     FormsModule,
     ReactiveFormsModule
   ],

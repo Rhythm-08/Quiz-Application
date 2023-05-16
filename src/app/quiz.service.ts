@@ -6,6 +6,7 @@ import { Injectable, OnInit } from '@angular/core';
 export class QuizService {
 
   constructor() { }
+  result:any;
 
   quizList: any[] =
     [{
@@ -58,5 +59,25 @@ export class QuizService {
     }
 
     ]
+    answerArray:any[]=[
+      "Washington, D.C.",
+      "Ottawa",
+      "Mexico City",
+      "Brasilia",
+      "Buenos Aires",
+      "Santiago",
+      "Lima",
+      "Bogota",
+      "Caracas",
+      "Quito"
+    ];
+
+    putResults(result:any){
+      this.result=result;
+    }
+
+    getResults(){
+      return this.result;
+    }
 
 }
